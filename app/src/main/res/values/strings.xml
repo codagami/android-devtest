@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DevTest</string>
+    <string name="city_hint">Enter city name, state, country</string>
+    <string name="city_search">Search</string>
+    <string name="temp_high">Expected high: %s</string>
+    <string name="temp_low">Expected low: %s</string>
+</resources>

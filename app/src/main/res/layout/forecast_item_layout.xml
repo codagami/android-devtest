@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="3dp"
+    android:backgroundTint="@color/cardview_shadow_end_color"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/image_text_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/weather_description_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".55"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/weather_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        tools:src="@drawable/sunny"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_text_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/weather_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Sunny"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/weather_description_guideline"
+        app:layout_constraintStart_toEndOf="@+id/image_text_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weather_temp_high"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Expected high: 40.0"
+        app:layout_constraintStart_toStartOf="@id/weather_description_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weather_guideline"/>
+
+    <TextView
+        android:id="@+id/weather_temp_low"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Expected low: 20.0"
+        app:layout_constraintStart_toStartOf="@id/weather_description_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/weather_guideline"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
